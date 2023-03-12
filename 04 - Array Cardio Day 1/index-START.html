@@ -51,14 +51,23 @@
       }
     })
 
-    console.log(fifteenCenthInventors)
-
+    // console.log(fifteenCenthInventors)
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
 
+    function getFullName(inventor){
+      return `${inventor.first} ${inventor.last}`
+    }
+
+    const inventorNames = inventors.map(getFullName)
+    console.log(inventorNames)
+
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+
+    inventors.sort((x,y) => x.year - y.year)
+    console.log(inventors)
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
